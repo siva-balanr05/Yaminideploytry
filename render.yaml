@@ -1,0 +1,46 @@
+# ===========================================
+# Render.com Deployment Configuration
+# ===========================================
+# This file configures the backend deployment on Render
+# ===========================================
+
+services:
+  # FastAPI Backend Service
+  - type: web
+    name: yamini-infotech-api
+    env: python
+    region: oregon  # or singapore for Asia
+    plan: free
+    branch: main
+    
+    # Build settings
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+    
+    # Root directory (if backend is in subdirectory)
+    rootDir: backend
+    
+    # Health check
+    healthCheckPath: /api/health
+    
+    # Environment variables (set these in Render dashboard)
+    envVars:
+      - key: DATABASE_URL
+        sync: false  # Set manually in dashboard
+      - key: SECRET_KEY
+        generateValue: true  # Auto-generate secure value
+      - key: CORS_ORIGINS
+        sync: false  # Set to your Vercel frontend URL
+      - key: CORS_ALLOW_ALL
+        value: false
+      - key: PYTHON_VERSION
+        value: 3.11.0
+
+# ===========================================
+# Database (Optional - use Neon or Supabase instead)
+# ===========================================
+# databases:
+#   - name: yamini-db
+#     plan: free
+#     databaseName: yamini_infotech
+#     user: yamini_user

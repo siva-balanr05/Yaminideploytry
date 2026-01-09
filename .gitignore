@@ -1,0 +1,138 @@
+# ===========================================
+# Yamini Infotech - Git Ignore Configuration
+# ===========================================
+
+# ===========================================
+# Dependencies
+# ===========================================
+node_modules/
+frontend/node_modules/
+.pnpm-store/
+.npm/
+.yarn/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+backend/__pycache__/
+backend/routers/__pycache__/
+backend/services/__pycache__/
+.venv/
+venv/
+ENV/
+env/
+*.egg-info/
+.eggs/
+pip-log.txt
+
+# ===========================================
+# Environment Variables - NEVER COMMIT!
+# ===========================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+backend/.env
+frontend/.env
+
+# ===========================================
+# Database Files
+# ===========================================
+*.db
+*.sqlite
+*.sqlite3
+*.sql.backup
+
+# ===========================================
+# Logs
+# ===========================================
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+backend/*.log
+
+# ===========================================
+# Uploads & User Data
+# ===========================================
+uploads/
+backend/uploads/
+!uploads/.gitkeep
+!backend/uploads/.gitkeep
+
+# ===========================================
+# IDE & Editor
+# ===========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.settings/
+
+# ===========================================
+# OS Generated Files
+# ===========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ===========================================
+# Build Outputs
+# ===========================================
+dist/
+build/
+frontend/dist/
+frontend/build/
+backend/build/
+*.bundle.js
+*.min.js
+*.min.css
+
+# ===========================================
+# Testing & Coverage
+# ===========================================
+.coverage
+htmlcov/
+.pytest_cache/
+coverage/
+.nyc_output/
+cypress/videos/
+cypress/screenshots/
+test-results/
+
+# ===========================================
+# Misc
+# ===========================================
+*.backup
+*.bak
+*.tmp
+*.temp
+.cache/
+.parcel-cache/
+
+# ===========================================
+# Secrets & Credentials
+# ===========================================
+*.pem
+*.key
+*.crt
+secrets.json
+credentials.json
+service-account.json

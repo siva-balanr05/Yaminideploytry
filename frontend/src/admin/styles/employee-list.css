@@ -1,0 +1,243 @@
+/* Admin Employee List - Refined Modern Card UI */
+
+.employee-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Page layout */
+.employee-page {
+  display: grid;
+  gap: 16px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title-icon {
+  font-size: 26px;
+}
+
+.title-text {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.title-sub {
+  margin: 2px 0 0 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.count-badge {
+  background: linear-gradient(180deg, #eef2ff 0%, #ffffff 100%);
+  border: 1px solid #e5e7eb;
+  color: #1f2937;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-weight: 600;
+  min-width: 36px;
+  text-align: center;
+}
+
+.search-wrap {
+  position: relative;
+  max-width: 520px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 14px 12px 36px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: #4f7396;
+  box-shadow: 0 0 0 3px rgba(79, 115, 150, 0.2);
+}
+
+.empty-state {
+  padding: 40px;
+  text-align: center;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+}
+
+.empty-icon { font-size: 40px; margin-bottom: 8px; }
+.empty-text { color: #6b7280; }
+
+.employee-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.employee-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #e5e7eb; /* gray-200 */
+  border-radius: 18px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.1s ease, border-color 0.2s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.employee-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(99,102,241,0.06), rgba(99,102,241,0)); /* indigo tint */
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.employee-card:hover {
+  box-shadow: 0 10px 26px rgba(16, 24, 40, 0.14);
+  transform: translateY(-1px);
+  border-color: #d1d5db; /* gray-300 */
+}
+
+.employee-card:hover::after {
+  opacity: 1;
+}
+
+.employee-card:active {
+  transform: translateY(0);
+}
+
+.employee-card:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+.employee-card-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.employee-card-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.employee-meta { min-width: 0; }
+
+.employee-name {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #111827; /* gray-900 */
+}
+
+.employee-role {
+  font-size: 13px;
+  color: #6b7280; /* gray-500/600 */
+  text-transform: capitalize;
+}
+
+.role-pill {
+  align-self: flex-start;
+  margin-top: 10px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #f0f6ff; /* light blue */
+  color: #0b64da; /* blue-700 */
+  border: 1px solid #dbeafe; /* blue-100 */
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,0.6);
+}
+
+.role-pill:hover {
+  background: #e6f0ff;
+}
+
+.employee-card-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.employee-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.open-btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: linear-gradient(180deg, #f6f9ff 0%, #ffffff 100%);
+  color: #0b64da;
+  font-weight: 600;
+}
+
+.open-btn:hover {
+  background: #eef6ff;
+}
+
+.employee-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: #1f2937; /* gray-800 */
+  background: radial-gradient(circle at 30% 30%, #e5e7eb 0%, #f3f4f6 60%, #e5e7eb 100%);
+  border: 1px solid #e5e7eb;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .employee-card {
+    padding: 16px;
+    border-radius: 16px;
+  }
+  .employee-card-main {
+    gap: 10px;
+  }
+  .employee-avatar {
+    width: 72px;
+    height: 72px;
+    font-size: 22px;
+  }
+}

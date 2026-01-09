@@ -1,0 +1,64 @@
+# ===========================================
+# Yamini Infotech Backend - Python Dependencies
+# ===========================================
+# Install with: pip install -r requirements.txt
+# ===========================================
+
+# ===========================================
+# Web Framework
+# ===========================================
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.6
+aiofiles>=23.2.1
+
+# ===========================================
+# Database
+# ===========================================
+sqlalchemy>=2.0.25
+psycopg2-binary>=2.9.9
+# Use psycopg2-binary for easy installation
+# For production, consider using psycopg2 (requires libpq-dev)
+
+# ===========================================
+# Authentication & Security
+# ===========================================
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+bcrypt>=4.1.2
+
+# ===========================================
+# Data Validation
+# ===========================================
+pydantic>=2.5.3
+pydantic-settings>=2.1.0
+email-validator>=2.1.0
+
+# ===========================================
+# Scheduling
+# ===========================================
+APScheduler>=3.10.4
+
+# ===========================================
+# HTTP Client (for external APIs)
+# ===========================================
+httpx>=0.26.0
+requests>=2.31.0
+
+# ===========================================
+# Utilities
+# ===========================================
+python-dotenv>=1.0.0
+python-dateutil>=2.8.2
+
+# ===========================================
+# Production Server
+# ===========================================
+gunicorn>=21.2.0
+
+# ===========================================
+# Optional: Development & Testing
+# ===========================================
+# pytest>=7.4.4
+# pytest-asyncio>=0.23.3
+# httpx>=0.26.0  # for testing
