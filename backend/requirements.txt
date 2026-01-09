@@ -55,14 +55,15 @@ pytz>=2024.1
 Pillow>=10.0.0
 
 # ===========================================
-# AI/ML - Chatbot Dependencies
+# AI/ML - Chatbot Dependencies (DISABLED - Too heavy for free tier)
 # ===========================================
-numpy>=1.24.0
-langdetect>=1.0.9
-mistralai>=0.1.0
-faiss-cpu>=1.7.4
-sentence-transformers>=2.2.2
-torch>=2.0.0
+# Uncomment for paid hosting with 2GB+ RAM:
+# numpy>=1.24.0
+# langdetect>=1.0.9
+# mistralai>=0.1.0
+# faiss-cpu>=1.7.4
+# sentence-transformers>=2.2.2
+# torch>=2.0.0
 
 # ===========================================
 # Production Server
